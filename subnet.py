@@ -1,6 +1,5 @@
 #enter your unique code
 uniquecode = 76334 
-numBits = 8
 def subnet(ipaddr,cidr):
     subNetHosts = (2**(32 - cidr)) # There are 256 available hosts
     octet = list(map(int,ipaddr.split('.'))) # split, apply binary then join again
@@ -21,87 +20,73 @@ def subnet(ipaddr,cidr):
     return netAddr, firstUseAddr, lastUseAddr, broadAddr
     
 
-#
-#problem 1
+
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('2.134.76.78',26)
+#problem 1
 p1Network = netAddr
 p1Broadcast = broadAddr
 p1First = firstUseAddr
 p1Last = lastAddr
 
-#problem 2
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('169.119.38.121',24)
+#problem 2
 p2Network = netAddr
 p2Broadcast = broadAddr
 p2First = firstUseAddr
 p2Last = lastAddr
 
-#problem 3
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('80.105.255.163',27)
+#problem 3
 p3Network = netAddr
 p3Broadcast = broadAddr
 p3First = firstUseAddr
 p3Last = lastAddr
 
-#problem 4
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('247.90.217.205',25)
+#problem 4
 p4Network = netAddr
 p4Broadcast = broadAddr
 p4First = firstUseAddr
 p4Last = lastAddr
 
-#problem 5
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('157.75.179.248',28)
+#problem 5
 p5Network = netAddr
 p5Broadcast = broadAddr
 p5First = firstUseAddr
 p5Last = lastAddr
 
-#problem 6
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('69.60.141.34',26)
+#problem 6
 p6Network = netAddr
 p6Broadcast = broadAddr
 p6First = firstUseAddr
 p6Last = lastAddr
 
-#problem 7
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('236.45.102.77',29)
+#problem 7
 p7Network = netAddr
 p7Broadcast = broadAddr
 p7First = firstUseAddr
 p7Last = lastAddr
 
-#problem 8
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('147.30.64.119',27)
+#problem 8
 p8Network = netAddr
 p8Broadcast = broadAddr
 p8First = firstUseAddr
 p8Last = lastAddr
 
-#problem 9
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('58.15.26.162',24)
+#problem 9
 p9Network = netAddr
 p9Broadcast = broadAddr
 p9First = firstUseAddr
 p9Last = lastAddr
 
-#problem 10
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('225.0.244.204',27)
+#problem 10
 p10Network = netAddr
 p10Broadcast = broadAddr
 p10First = firstUseAddr
 p10Last = lastAddr
-
-
-
-"""
-example:
-
-uniquecode = 12345
-
-problem 1
-p1Network = '199.204.14.128'
-p1Broadcast = '199.204.14.255'
-p1First = '199.204.14.129'
-p1Last =  '199.204.14.254'
-"""
