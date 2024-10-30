@@ -1,5 +1,3 @@
-#enter your unique code
-uniquecode = "76334"
 def subnet(ipaddr,cidr):
     subNetHosts = (2**(32 - cidr)) # There are 256 available hosts
     octet = list(map(int,ipaddr.split('.'))) # split, apply binary then join again
@@ -18,8 +16,9 @@ def subnet(ipaddr,cidr):
     lastUseAddr =  f"{broadAddr[0:broadAddr.rindex('.')]}.{eval(f"{broadAddr[broadAddr.rindex('.')+1::]}-1")}"
 
     return netAddr, firstUseAddr, lastUseAddr, broadAddr
-    
 
+#enter your unique code
+uniquecode = '76334'
 
 #problem 1
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('2.134.76.78',26)
