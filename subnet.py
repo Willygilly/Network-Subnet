@@ -1,6 +1,5 @@
 #enter your unique code
 uniquecode = 76334 
-numBits = 8
 def subnet(ipaddr,cidr):
     subNetHosts = (2**(32 - cidr)) # There are 256 available hosts
     octet = list(map(int,ipaddr.split('.'))) # split, apply binary then join again
@@ -21,76 +20,76 @@ def subnet(ipaddr,cidr):
     return netAddr, firstUseAddr, lastUseAddr, broadAddr
     
 
-#
+
+netAddr,firstAddr,lastAddr,broadAddr = subnet('2.134.76.78',26)
 #problem 1
-netAddr,firstUseAddr,lastAddr,broadAddr = subnet('2.134.76.78',26)
-p1Network = netAddr
-p1Broadcast = broadAddr
-p1First = firstUseAddr
-p1Last = lastAddr
+p1Network = f'{netAddr}'
+p1Broadcast = f'{broadAddr}'
+p1First = f'{firstAddr}'
+p1Last = f'{lastAddr}'
 
-#problem 2
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('169.119.38.121',24)
-p2Network = netAddr
-p2Broadcast = broadAddr
-p2First = firstUseAddr
-p2Last = lastAddr
+#problem 2
+p2Network = f'{netAddr}'
+p2Broadcast = f'{broadAddr}'
+p2First = f'{firstAddr}'
+p2Last = f'{lastAddr}'
 
-#problem 3
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('80.105.255.163',27)
-p3Network = netAddr
-p3Broadcast = broadAddr
-p3First = firstUseAddr
-p3Last = lastAddr
+#problem 3
+p3Network = f'{netAddr}'
+p3Broadcast = f'{broadAddr}'
+p3First = f'{firstUseAddr}'
+p3Last = f'{lastAddr}'
 
-#problem 4
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('247.90.217.205',25)
-p4Network = netAddr
-p4Broadcast = broadAddr
-p4First = firstUseAddr
-p4Last = lastAddr
+#problem 4
+p4Network = f'{netAddr}'
+p4Broadcast = f'{broadAddr}'
+p4First = f'{firstUseAddr}'
+p4Last = f'{lastAddr}'
 
-#problem 5
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('157.75.179.248',28)
-p5Network = netAddr
-p5Broadcast = broadAddr
-p5First = firstUseAddr
-p5Last = lastAddr
+#problem 5
+p5Network = f'{netAddr}'
+p5Broadcast = f'{broadAddr}'
+p5First = f'{firstUseAddr}'
+p5Last = f'{lastAddr}'
 
-#problem 6
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('69.60.141.34',26)
-p6Network = netAddr
-p6Broadcast = broadAddr
-p6First = firstUseAddr
-p6Last = lastAddr
+#problem 6
+p6Network = f'{netAddr}'
+p6Broadcast = f'{broadAddr}'
+p6First = f'{firstUseAddr}'
+p6Last = f'{lastAddr}'
 
-#problem 7
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('236.45.102.77',29)
-p7Network = netAddr
-p7Broadcast = broadAddr
-p7First = firstUseAddr
-p7Last = lastAddr
+#problem 7
+p7Network = f'{netAddr}'
+p7Broadcast = f'{broadAddr}'
+p7First = f'{firstUseAddr}'
+p7Last = f'{lastAddr}'
 
-#problem 8
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('147.30.64.119',27)
-p8Network = netAddr
-p8Broadcast = broadAddr
-p8First = firstUseAddr
-p8Last = lastAddr
+#problem 8
+p8Network = f'{netAddr}'
+p8Broadcast = f'{broadAddr}'
+p8First = f'{firstUseAddr}'
+p8Last = f'{lastAddr}'
 
-#problem 9
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('58.15.26.162',24)
-p9Network = netAddr
-p9Broadcast = broadAddr
-p9First = firstUseAddr
-p9Last = lastAddr
+#problem 9
+p9Network = f'{netAddr}'
+p9Broadcast = f'{broadAddr}'
+p9First = f'{firstUseAddr}'
+p9Last = f'{lastAddr}'
 
-#problem 10
 netAddr,firstUseAddr,lastAddr,broadAddr = subnet('225.0.244.204',27)
-p10Network = netAddr
-p10Broadcast = broadAddr
-p10First = firstUseAddr
-p10Last = lastAddr
+#problem 10
+p10Network = f'{netAddr}'
+p10Broadcast = f'{broadAddr}'
+p10First = f'{firstUseAddr}'
+p10Last = f'{lastAddr}'
 
 
 
