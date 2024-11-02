@@ -1,95 +1,65 @@
 #enter your unique code
 uniquecode = 76334
-def subnet(ipaddr,cidr):
-    subNetHosts = (2**(32 - cidr)) # There are 256 available hosts
-    octet = list(map(int,ipaddr.split('.'))) # split, apply binary then join again
-    octetBit = ''.join(list(map(lambda x: format(x,'b').rjust(8,'0'),octet))) # formating and padding  converting ip address to binary
-
-    hostBitMask = format(subNetHosts,'b').rjust(32,'1')
-    netBitMasking = format(int(hostBitMask,2) & int(octetBit,2),'b').rjust(32,'0')
-    netAddrBit = f"{netBitMasking[0:8]}.{netBitMasking[8:16]}.{netBitMasking[16:24]}.{netBitMasking[24:32]}"
-    netAddr = '.'.join(list(map(lambda x: str(int(x,2)),netAddrBit.split('.'))))
-
-    broadBitMasking= netBitMasking[0:cidr].ljust(32,'1')
-    broadAddrBit = f"{broadBitMasking[0:8]}.{broadBitMasking[8:16]}.{broadBitMasking[16:24]}.{broadBitMasking[24:32]}"
-    broadAddr = '.'.join(list(map(lambda x: str(int(x,2)),broadAddrBit.split('.'))))
-
-    firstUseAddr = f"{netAddr[0:netAddr.rindex('.')]}.{eval(f"{netAddr[netAddr.rindex('.')+1::]}+1")}" # slice the prefix, add/evalaute the octet of interetst
-    lastUseAddr =  f"{broadAddr[0:broadAddr.rindex('.')]}.{eval(f"{broadAddr[broadAddr.rindex('.')+1::]}-1")}"
-
-    return netAddr, firstUseAddr, lastUseAddr, broadAddr
-    
-
 
 #problem 1
-netAddr,firstUseAddr,lastAddr,broadAddr = subnet('2.134.76.78',26)
-p1Network = netAddr
-p1Broadcast = broadAddr
-p1First = firstUseAddr
-p1Last = lastAddr
+p1Network = '2.134.76.64'
+p1Broadcast = '2.134.76.127'
+p1First = '2.134.76.65'
+p1Last = '2.134.76.126'
 
 #problem 2
-netAddr,firstUseAddr,lastAddr,broadAddr = subnet('169.119.38.121',24)
-p2Network = netAddr
-p2Broadcast = broadAddr
-p2First = firstUseAddr
-p2Last = lastAddr
+p2Network = '169.119.38.0'
+p2Broadcast = '169.119.38.255'
+p2First = '169.119.38.1'
+p2Last = '169.119.38.254'
 
 #problem 3
-netAddr,firstUseAddr,lastAddr,broadAddr = subnet('80.105.255.163',27)
-p3Network = netAddr
-p3Broadcast = broadAddr
-p3First = firstUseAddr
-p3Last = lastAddr
+p3Network = '80.105.255.160'
+p3Broadcast = '80.105.255.191'
+p3First = '80.105.255.161'
+p3Last = '80.105.255.190'
 
 #problem 4
-netAddr,firstUseAddr,lastAddr,broadAddr = subnet('247.90.217.205',25)
-p4Network = netAddr
-p4Broadcast = broadAddr
-p4First = firstUseAddr
-p4Last = lastAddr
+p4Network = '247.90.127.128'
+p4Broadcast = '247.90.127.255'
+p4First = '247.90.127.129'
+p4Last = '247.90.127.254'
 
 #problem 5
-netAddr,firstUseAddr,lastAddr,broadAddr = subnet('157.75.179.248',28)
-p5Network = netAddr
-p5Broadcast = broadAddr
-p5First = firstUseAddr
-p5Last = lastAddr
+p5Network = '158.75.179.240'
+p5Broadcast = '158.75.179.255'
+p5First = '158.75.179.241'
+p5Last = '158.75.179.254'
 
 #problem 6
-netAddr,firstUseAddr,lastAddr,broadAddr = subnet('69.60.141.34',26)
-p6Network = netAddr
-p6Broadcast = broadAddr
-p6First = firstUseAddr
-p6Last = lastAddr
+p6Network = '69.60.141.0'
+p6Broadcast = '69.60.141.63'
+p6First = '69.60.141.1'
+p6Last = '69.60.141.62'
 
 #problem 7
-netAddr,firstUseAddr,lastAddr,broadAddr = subnet('236.45.102.77',29)
-p7Network = netAddr
-p7Broadcast = broadAddr
-p7First = firstUseAddr
-p7Last = lastAddr
+p7Network = '236.45.102.72'
+p7Broadcast = '236.45.102.79'
+p7First = '236.45.102.73'
+p7Last = '236.45.102.78'
 
 #problem 8
-netAddr,firstUseAddr,lastAddr,broadAddr = subnet('147.30.64.119',27)
-p8Network = netAddr
-p8Broadcast = broadAddr
-p8First = firstUseAddr
-p8Last = lastAddr
+p8Network = '147.30.64.96'
+p8Broadcast = '147.30.64.127'
+p8First = '147.30.64.97'
+p8Last = '147.30.64.126'
 
 #problem 9
-netAddr,firstUseAddr,lastAddr,broadAddr = subnet('58.15.26.162',24)
-p9Network = netAddr
-p9Broadcast = broadAddr
-p9First = firstUseAddr
-p9Last = lastAddr
+p9Network = '58.15.26.0'
+p9Broadcast = '58.15.26.255'
+p9First = '58.15.26.1'
+p9Last = '58.15.26.254'
 
 #problem 10
-netAddr,firstUseAddr,lastAddr,broadAddr = subnet('225.0.244.204',27)
-p10Network = netAddr
-p10Broadcast = broadAddr
-p10First = firstUseAddr
-p10Last = lastAddr
+p10Network = '225.0.244.192'
+p10Broadcast = '225.0.244.223'
+p10First = '225.0.244.193'
+p10Last = '225.0.244.222'
 
 
 
